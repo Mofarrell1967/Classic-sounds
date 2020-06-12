@@ -10,7 +10,9 @@ class UserLoginForm(forms.Form):
 
     username = forms.CharField()
     password = forms.CharField(widget=forms.PasswordInput)
-
+    def __init__(self, *args, **kwargs):
+        super(UserLoginForm, self).__init__(*args, **kwargs)
+        self.fields["username"].label="Username or Email"
 
 class UserRegistrationForm(UserCreationForm):
     """Form used to register a new user"""

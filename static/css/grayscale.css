@@ -137,7 +137,7 @@
 
 .btn {
   box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
-  padding: 1.25rem 2rem;
+  padding: 1.rem 2rem;
   font-family: 'Varela Round';
   font-size: 80%;
   text-transform: uppercase;
@@ -295,3 +295,4 @@ a:focus, a:hover {
 footer {
   padding: 5rem 0;
 }
+

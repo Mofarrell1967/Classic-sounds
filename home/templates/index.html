@@ -1,12 +1,14 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %}
+{% block content %}
+
 
  <!-- Header -->
   <header class="masthead">
     <div class="container d-flex h-100 align-items-center">
       <div class="mx-auto text-center">
         <h1 class="mx-auto my-0 text-uppercase">Classic Sounds</h1>
-        <h2 class="text-white-50 mx-auto mt-2 mb-5">On-Line Music Store for aged instruments that are rare and hard to find.</h2>
-        <a href="" class="btn btn-primary js-scroll-trigger">Login or Register</a>
+        <h2 class="text-white-50 mx-auto mt-2 mb-5">We find the gems lost in the mists of time.</h2>
+        <a href="{% url 'login' %}" class="btn btn-primary js-scroll-trigger">Login or Register</a>
       </div>
     </div>
   </header>
@@ -39,18 +41,22 @@
         <div class="col-lg-6">
           <div class="bg-black text-center h-100 project">
             <div class="d-flex h-100">
-              <div class="project-text w-100 my-auto text-center text-lg-left">
-                <h4 class="text-white">Guitars</h4>
+            <div class="project-text w-100 my-auto text-center text-lg-left">
+              <h4 class="text-white">Guitars</h4>
                 <p class="mb-0 text-white-50">An example of where you can put an image of a project, or anything else, along with a description.</p>
+                <br>
+                 <a href="{% url 'products' %}" class="btn btn-primary js-scroll-trigger">View Guitars</a>
+                 <br>
                 <hr class="d-none d-lg-block mb-0 ml-0">
-              </div>
+                      </div>
+              
             </div>
           </div>
         </div>
       </div>
 
       <!-- Project Two Row -->
-      <div class="row justify-content-center no-gutters">
+      <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
         <div class="col-lg-6">
           <img class="img-fluid" src="static/img/drums.jpg" alt="">
         </div>
@@ -60,6 +66,9 @@
               <div class="project-text w-100 my-auto text-center text-lg-right">
                 <h4 class="text-white">Percussion</h4>
                 <p class="mb-0 text-white-50">Another example of a project with its respective description. These sections work well responsively as well, try this theme on a small screen!</p>
+                 <br>
+                 <a href="" class="btn btn-primary js-scroll-trigger">View Percussion</a>
+                 <br>
                 <hr class="d-none d-lg-block mb-0 mr-0">
               </div>
             </div>
@@ -67,25 +76,27 @@
         </div>
       </div>
 
-       <!-- Project Three Row -->
+      <!-- Project One Row -->
       <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
         <div class="col-lg-6">
-          <img class="img-fluid" src="static/img/keys.jpg" alt="">
+          <img class="img-fluid" src="static/img/keyboard.jpg" alt="">
         </div>
         <div class="col-lg-6">
           <div class="bg-black text-center h-100 project">
             <div class="d-flex h-100">
-              <div class="project-text w-100 my-auto text-center text-lg-left">
-                <h4 class="text-white">Keyboards</h4>
+            <div class="project-text w-100 my-auto text-center text-lg-left">
+              <h4 class="text-white">Keyboards</h4>
                 <p class="mb-0 text-white-50">An example of where you can put an image of a project, or anything else, along with a description.</p>
+                <br>
+                 <a href="" class="btn btn-primary js-scroll-trigger">View Keyboards</a>
+                 <br>
                 <hr class="d-none d-lg-block mb-0 ml-0">
-              </div>
+                      </div>
+              
             </div>
           </div>
         </div>
       </div>
-
-    </div>
   </section>
 
   <!-- Signup Section -->
@@ -163,11 +174,9 @@
 
     </div>
   </section>
-
   
 </body>
 
 </html>
-
 
 {% endblock %}
