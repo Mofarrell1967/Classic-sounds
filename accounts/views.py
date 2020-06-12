@@ -7,6 +7,7 @@ from django.contrib.auth.decorators import login_required
 from products.models import Product
 from checkout.models import Order, OrderLineItem
 from django.contrib.auth.models import User
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 
 # Create your views here.
@@ -54,10 +55,9 @@ def login(request):
 
 @login_required
 def profile(request):
-    """A view that displays the profile page of a logged in user"""
+    """A view that displays the profile page of a logged in user with previous orders"""
     user_orders = Order.objects.filter(user=request.user)
     return render(request, 'profile.html', {"Orders": user_orders})
-
 
 def register(request):
     """A view that manages the registration form"""
